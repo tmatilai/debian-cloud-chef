@@ -1,3 +1,9 @@
 #!/bin/bash
-chroot $imagedir bash <(wget -qO - https://www.opscode.com/chef/install.sh) \
-	-v ${CHEF_VERSION:-latest}
+if [ $arch = 'amd64' ]; then
+	chef_arch='x86_64'
+else
+	chef_arch=$arch
+fi
+chef_deb=`chroot $imagedir mktemp`
+chroot $imagedir wget -qO chef_deb "https://www.opscode.com/chef/download?v=${CHEF_VERSION:-latest}&p=debian&pv=6&m=$chef_arch"
+chroot $imagedir dpkg -i chef_deb
