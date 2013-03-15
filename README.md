@@ -15,3 +15,6 @@ or clone the [git repository](https://github.com/tmatilai/ec2debian-chef).
 Then pass the plugin to ec2debian-build-ami:
 
     ./ec2debian-build-ami --plugin <path_to>/ec2debian-chef/install-chef
+
+By default the latest stable release of Chef client is installed.
+`$CHEF_VERSION` environment variable can be used to specify another version.
