@@ -2,10 +2,15 @@
 
 This [ec2debian-build-ami](https://github.com/andsens/ec2debian-build-ami)
 plugin installs Opscode Chef client using the [Omnibus installer]
-(http://www.opscode.com/chef/install/).
+(http://www.opscode.com/chef/install/). It also installs rsync to support e.g.
+[Vagrant AWS Provider](https://github.com/mitchellh/vagrant-aws) and
+[knife-solo](http://matschaffer.github.com/knife-solo/).
 
-*Until the Omnibus Chef installer supports wheezy, this plugin only works on
-Debian squeeze.*
+*Until the Omnibus Chef installer supports Debian 7.0 Wheezy, this plugin only
+works on Debian 6.0 Squeeze. Check out the [wheezy branch]
+(https://github.com/tmatilai/ec2debian-chef/tree/wheezy) if you want to use
+the Squeeze package for Wheezy.*
+
 
 ## Usage
 
