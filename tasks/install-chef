@@ -1,0 +1,3 @@
+#!/bin/bash
+chroot $imagedir bash <(wget -qO - https://www.opscode.com/chef/install.sh) \
+	-v ${CHEF_VERSION:-latest}
