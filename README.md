@@ -8,18 +8,18 @@ plugin installs Opscode Chef client using the [Omnibus installer]
 
 *Until the Omnibus Chef installer supports Debian 7.0 Wheezy, this plugin only
 works on Debian 6.0 Squeeze. Check out the [wheezy branch]
-(https://github.com/tmatilai/ec2debian-chef/tree/wheezy) if you want to use
+(https://github.com/tmatilai/debian-cloud-chef/tree/wheezy) if you want to use
 the Squeeze package for Wheezy.*
 
 
 ## Usage
 
 To install the plugin, download and extract the [tarball]
- (https://github.com/tmatilai/ec2debian-chef/archive/master.tar.gz)
-or clone the [git repository](https://github.com/tmatilai/ec2debian-chef).
+ (https://github.com/tmatilai/debian-cloud-chef/archive/master.tar.gz)
+or clone the [git repository](https://github.com/tmatilai/debian-cloud-chef).
 Then pass the plugin to build-debian-cloud:
 
-    ./build-debian-cloud (ec2 | gce) --plugin <path_to>/ec2debian-chef/install-chef
+    ./build-debian-cloud (ec2 | gce) --plugin <path_to>/debian-cloud-chef/install-chef
 
 By default the latest stable release of Chef client is installed.
 `$CHEF_VERSION` environment variable can be used to specify another version.
