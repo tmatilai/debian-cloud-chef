@@ -1,6 +1,6 @@
-# Chef installer plugin for ec2debian-build-ami
+# Chef installer plugin for build-debian-cloud
 
-This [ec2debian-build-ami](https://github.com/andsens/ec2debian-build-ami)
+This [build-debian-cloud](https://github.com/andsens/build-debian-cloud)
 plugin installs Opscode Chef client using the [Omnibus installer]
 (http://www.opscode.com/chef/install/). It also installs rsync to support e.g.
 [Vagrant AWS Provider](https://github.com/mitchellh/vagrant-aws) and
@@ -17,9 +17,9 @@ the Squeeze package for Wheezy.*
 To install the plugin, download and extract the [tarball]
  (https://github.com/tmatilai/ec2debian-chef/archive/master.tar.gz)
 or clone the [git repository](https://github.com/tmatilai/ec2debian-chef).
-Then pass the plugin to ec2debian-build-ami:
+Then pass the plugin to build-debian-cloud:
 
-    ./ec2debian-build-ami --plugin <path_to>/ec2debian-chef/install-chef
+    ./build-debian-cloud (ec2 | gce) --plugin <path_to>/ec2debian-chef/install-chef
 
 By default the latest stable release of Chef client is installed.
 `$CHEF_VERSION` environment variable can be used to specify another version.
